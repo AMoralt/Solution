@@ -53,6 +53,15 @@
 
                 return distance <= (Radius + circle.Radius);
             }
+            if (shape is Square square)
+            {
+                var x = Math.Max(square.Center.X - square.HalfSide, Math.Min(Center.X, square.Center.X + square.HalfSide));
+                var y = Math.Max(square.Center.Y - square.HalfSide, Math.Min(Center.Y, square.Center.Y + square.HalfSide));
+
+                var distanceSquare = Math.Sqrt( Math.Pow((x - Center.X),2) +   Math.Pow((y - Center.Y),2));
+
+                return distanceSquare <= Radius;
+            }
             return false;
         }
 

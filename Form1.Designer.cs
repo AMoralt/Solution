@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             button1 = new Button();
-            panel1 = new Panel();
+            panel1 = new DoubleBufferedPanel();
             timer1 = new System.Windows.Forms.Timer(components);
             button2 = new Button();
             colorDialog1 = new ColorDialog();
@@ -157,7 +157,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1091, 629);
+            ClientSize = new Size(1091, 624);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label2);
@@ -167,6 +167,7 @@
             Controls.Add(panel1);
             Controls.Add(button1);
             DoubleBuffered = true;
+            MaximumSize = new Size(1117, 695);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
@@ -178,7 +179,7 @@
 
         #endregion
         private Button button1;
-        private Panel panel1;
+        private DoubleBufferedPanel panel1;
         private System.Windows.Forms.Timer timer1;
         private Button button2;
         private ColorDialog colorDialog1;
